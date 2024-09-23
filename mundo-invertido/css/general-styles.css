@@ -1,0 +1,140 @@
+/***  FONTS ***/
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap");
+
+
+/***  GENERAL STYLES ***/
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    transition: 1.5s;
+}
+
+body {
+    background: var(--page-background);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--featured-font-family);
+    font-size: 3rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+p {
+    color: var(--highlight-color);
+}
+
+p,
+input,
+textarea,
+label {
+    font-family: "Libre Baskerville", serif;
+}
+
+button {
+    padding: 16px 32px;
+    background-color: transparent;
+    font-weight: 900;
+    font-family: var(--featured-font-family);
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 1s;
+}
+
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+main::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: var(--page-background) no-repeat,
+        url("../assets/images/backgrounds/florest.png") no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+input,
+textarea {
+    border: 2px solid var(--primary-color-contrast);
+    background-color: var(--field-background-color);
+    color: var(--primary-color-contrast);
+    padding: 8px;
+}
+
+input,
+textarea {
+    margin-bottom: 24px;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+    outline: none;
+    border-color: black;
+}
+
+/*** HEADER STYLES ***/
+
+header {
+    background-color: var(--header-background-color);
+    min-height: 850px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+header::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url("../assets/images/banner/florest.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 90%;
+    filter: saturate(0);
+    opacity: 0.2;
+}
+
+.header-content {
+    max-width: 700px;
+    padding: 80px 20px;
+    text-align: center;
+    z-index: 2;
+}
+
+.header-content img {
+    width: 80%;
+}
+
+.header-content p {
+    margin: 30px 0 50px;
+}
+
+.header-content button {
+    border: 3px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.header-content button:hover {
+    background-color: var(--primary-color);
+    color: var(--primary-color-contrast);
+}
