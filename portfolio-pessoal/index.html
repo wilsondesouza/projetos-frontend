@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Website personal portfolio">
+    <meta name="author" content="Wilson Souza">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
+	<meta property="og:site_name" content="wilsondesouza • portfolio" /> <!-- website name -->
+	<meta property="og:site" content="https://portfolio-wilsondesouzas-projects.vercel.app/" /> <!-- website link -->
+    <meta property=”og:type” content=”website“/> <!--  describes the type of content -->
+	<meta property="og:title" content="Mobile & Front-End Developer • Wilson Souza"/> <!-- title shown in the actual shared post -->
+	<meta property="og:description" content="Bem vindo ao meu portfolio. Aqui você encontra meus principais projetos" /> <!-- description shown in the actual shared post -->
+	<meta property="og:image" content="https://i.postimg.cc/Pr2FgyS3/ogimage.png" /> <!-- image link, make sure it's jpg -->
+	<meta property="og:url" content="https://wilsondesouza.github.io/portfolio/" /> <!-- where do you want your post to link to -->
+	<meta name="twitter:card" content="https://i.postimg.cc/Pr2FgyS3/ogimage.png"> <!-- to have large image post format in Twitter -->
+
+    <!-- Webpage Title -->
+    <title>Wilson Souza • Computer Engineer</title>
+    
+    <!-- Styles -->
+    <link rel="preconnect" href="https://fonts.gstatic.com"> <!-- Fonts Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@600&display=swap"
+     rel="stylesheet"> <!-- Fonts Google -->
+
+     <link href="css/bootstrap.min.css" rel="stylesheet"> <!-- Bootstrap -->
+
+
+    <!-- Personal -->
+	<link href="css/styles.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+    <link href="css/media.css" rel="stylesheet">
+    <link href="css/general-styles.css" rel="stylesheet">
+    <link href="css/theme.css" rel="stylesheet">
+	
+	<!-- Favicon  -->
+    <link rel="icon" href="assets/images/OIG.avif">
+
+    
+
+    <!-- Splide -->
+    <link rel="stylesheet" href="css/splide.min.css">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            new Splide('#main-projects', {
+                type   : 'loop',
+                wheel  : true,
+            }).mount();
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            new Splide('#othersProjects', {
+                type   : 'loop',
+                wheel  : true,
+            }).mount();
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            new Splide('#aboutMe', {
+                type   : 'loop',
+                wheel  : true,
+            }).mount();
+        });
+    </script>
+    
+</head>
+<body data-spy="scroll" data-target=".fixed-top">  
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container">
+            <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas" title="Alterar Tema">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#header" id="inicio-nav">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#about" id="sobre-nav">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#projects" id="projetos-nav">Projetos</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href=".footer" id="contato-nav">Contato</a>
+                    </li>
+                </ul>
+                <span class="nav-item social-icons">
+                    <div id="menu-lateral">
+                        <a type="button" id="botãoTranslate" class="translate" title="Translate">
+                            <div class="filled"></div>
+                            <svg id="meu-svg2" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-translate" viewBox="0 0 16 16">
+                                <defs>
+                                    <!-- Definição do primeiro gradiente -->
+                                    <linearGradient id="gradiente-3">
+                                        <stop offset="0%" stop-color="#b22234" />
+                                        <stop offset="50%" stop-color="#ffffff" />
+                                        <stop offset="100%" stop-color="#3c3b6e" />
+                                    </linearGradient>
+                        
+                                    <!-- Definição do segundo gradiente -->
+                                    <linearGradient id="gradiente-4">
+                                        <stop offset="0%" stop-color="#ffcc29" />
+                                        <stop offset="50%" stop-color="#009e49" />
+                                        <stop offset="100%" stop-color="#002776" />
+                                    </linearGradient>
+                                </defs>
+                                <path fill="white"
+                                    d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286zm1.634-.736L5.5 3.956h-.049l-.679 2.022z" />
+                                <path id="meu-path2" fill="url(#gradiente-3)"
+                                    d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm7.138 9.995q.289.451.63.846c-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6 6 0 0 1-.415-.492 2 2 0 0 1-.94.31" />
+                            </svg><span class="text">Translate</span>
+                        </a>
+                    </div>     
+
+                    <a title="LinkedIn" href="https://www.linkedin.com/in/wilson-souza-junior/" target="_blank" rel="noopener">
+                        <button type="button" class="linked-in">
+                        <svg viewBox="0 0 16 16" height="16" width="16" xmlns="http://www.w3.org/2000/svg" class="svgIcon"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"></path></svg><span class="text">LinkedIn</span></button></a>
+
+                    <a title="GitHub" href="https://github.com/wilsondesouza" target="_blank" rel="noopener">
+                        <button type="button" class="git-hub">
+                            <svg class="svgIcon" viewBox="0 0 496 512" height="1.4em" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+                        <span class="text">Github</span></button></a>
+
+                    <a title="Instagram" href="https://www.instagram.com/juni0r.s0uza/" target="_blank" rel="noopener">
+                        <button type="button" class="insta-gram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-instagram svgIcon" viewBox="0 0 16 16" xml:space="preserve">
+                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"></path>
+                            </svg><span class="text">Instagram</span></button></a>
+
+                    <a title="Youtube" href="https://www.youtube.com/@wilsonsouza7720" target="_blank" rel="noopener">
+                        <button type="button" class="you-tube">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube svgIcon" viewBox="0 0 16 16" xml:space="preserve">
+                                <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z" fill="white"></path>
+                            </svg><span class="text">Youtube</span></button></a>
+                </span>
+            </div> <!-- end of navbar-collapse -->
+
+            <!-- Theme Toggle -->
+                <label id="theme-toggle-button">
+                    <label for="toggle" class="sr-only"></label>
+                    <input type="checkbox" id="toggle" title="Toggle Theme">
+                    <svg viewBox="0 0 69.667 44" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                        <g transform="translate(3.5 3.5)" data-name="Component 15 – 1" id="Component_15_1">
+                
+                
+                            <g filter="url(#container)" transform="matrix(1, 0, 0, 1, -3.5, -3.5)">
+                                <rect fill="#83cbd8" transform="translate(3.5 3.5)" rx="17.5" height="35" width="60.667"
+                                    data-name="container" id="container"></rect>
+                            </g>
+                
+                            <g transform="translate(2.333 2.333)" id="button">
+                
+                                <g data-name="sun" id="sun">
+                                    <g filter="url(#sun-outer)" transform="matrix(1, 0, 0, 1, -5.83, -5.83)">
+                                        <circle fill="#f8e664" transform="translate(5.83 5.83)" r="15.167" cy="15.167" cx="15.167"
+                                            data-name="sun-outer" id="sun-outer-2"></circle>
+                                    </g>
+                                    <g filter="url(#sun)" transform="matrix(1, 0, 0, 1, -5.83, -5.83)">
+                                        <path fill="rgba(246,254,247,0.29)" transform="translate(9.33 9.33)"
+                                            d="M11.667,0A11.667,11.667,0,1,1,0,11.667,11.667,11.667,0,0,1,11.667,0Z" data-name="sun"
+                                            id="sun-3"></path>
+                                    </g>
+                                    <circle fill="#fcf4b9" transform="translate(8.167 8.167)" r="7" cy="7" cx="7" id="sun-inner">
+                                    </circle>
+                                </g>
+                
+                
+                                <g data-name="moon" id="moon">
+                                    <g filter="url(#moon)" transform="matrix(1, 0, 0, 1, -31.5, -5.83)">
+                                        <circle fill="#cce6ee" transform="translate(31.5 5.83)" r="15.167" cy="15.167" cx="15.167"
+                                            data-name="moon" id="moon-3"></circle>
+                                    </g>
+                                    <g fill="#a6cad0" transform="translate(-24.415 -1.009)" id="patches">
+                                        <circle transform="translate(43.009 4.496)" r="2" cy="2" cx="2"></circle>
+                                        <circle transform="translate(39.366 17.952)" r="2" cy="2" cx="2" data-name="patch"></circle>
+                                        <circle transform="translate(33.016 8.044)" r="1" cy="1" cx="1" data-name="patch"></circle>
+                                        <circle transform="translate(51.081 18.888)" r="1" cy="1" cx="1" data-name="patch"></circle>
+                                        <circle transform="translate(33.016 22.503)" r="1" cy="1" cx="1" data-name="patch"></circle>
+                                        <circle transform="translate(50.081 10.53)" r="1.5" cy="1.5" cx="1.5" data-name="patch">
+                                        </circle>
+                                    </g>
+                                </g>
+                            </g>
+                
+                
+                            <g filter="url(#cloud)" transform="matrix(1, 0, 0, 1, -3.5, -3.5)">
+                                <path fill="#fff" transform="translate(-3466.47 -160.94)"
+                                    d="M3512.81,173.815a4.463,4.463,0,0,1,2.243.62.95.95,0,0,1,.72-1.281,4.852,4.852,0,0,1,2.623.519c.034.02-.5-1.968.281-2.716a2.117,2.117,0,0,1,2.829-.274,1.821,1.821,0,0,1,.854,1.858c.063.037,2.594-.049,3.285,1.273s-.865,2.544-.807,2.626a12.192,12.192,0,0,1,2.278.892c.553.448,1.106,1.992-1.62,2.927a7.742,7.742,0,0,1-3.762-.3c-1.28-.49-1.181-2.65-1.137-2.624s-1.417,2.2-2.623,2.2a4.172,4.172,0,0,1-2.394-1.206,3.825,3.825,0,0,1-2.771.774c-3.429-.46-2.333-3.267-2.2-3.55A3.721,3.721,0,0,1,3512.81,173.815Z"
+                                    data-name="cloud" id="cloud"></path>
+                            </g>
+                
+                
+                            <g fill="#def8ff" transform="translate(3.585 1.325)" id="stars">
+                                <path transform="matrix(-1, 0.017, -0.017, -1, 24.231, 3.055)"
+                                    d="M.774,0,.566.559,0,.539.458.933.25,1.492l.485-.361.458.394L1.024.953,1.509.592.943.572Z"></path>
+                                <path transform="matrix(-0.777, 0.629, -0.629, -0.777, 23.185, 12.358)"
+                                    d="M1.341.529.836.472.736,0,.505.46,0,.4.4.729l-.231.46L.605.932l.4.326L.9.786Z" data-name="star">
+                                </path>
+                                <path transform="matrix(0.438, 0.899, -0.899, 0.438, 23.177, 29.735)"
+                                    d="M.015,1.065.475.9l.285.365L.766.772l.46-.164L.745.494.751,0,.481.407,0,.293.285.658Z"
+                                    data-name="star"></path>
+                                <path transform="translate(12.677 0.388) rotate(104)"
+                                    d="M1.161,1.6,1.059,1,1.574.722.962.607.86,0,.613.572,0,.457.446.881.2,1.454l.516-.274Z"
+                                    data-name="star"></path>
+                                <path transform="matrix(-0.07, 0.998, -0.998, -0.07, 11.066, 15.457)"
+                                    d="M.873,1.648l.114-.62L1.579.945,1.03.62,1.144,0,.706.464.157.139.438.7,0,1.167l.592-.083Z"
+                                    data-name="star"></path>
+                                <path transform="translate(8.326 28.061) rotate(11)"
+                                    d="M.593,0,.638.724,0,.982l.7.211.045.724.36-.64.7.211L1.342.935,1.7.294,1.063.552Z"
+                                    data-name="star"></path>
+                                <path transform="translate(5.012 5.962) rotate(172)"
+                                    d="M.816,0,.5.455,0,.311.323.767l-.312.455.516-.215.323.456L.827.911,1.343.7.839.552Z"
+                                    data-name="star"></path>
+                                <path transform="translate(2.218 14.616) rotate(169)"
+                                    d="M1.261,0,.774.571.114.3.487.967,0,1.538.728,1.32l.372.662.047-.749.728-.218L1.215.749Z"
+                                    data-name="star"></path>
+                            </g>
+                        </g>
+                    </svg>
+                </label>
+        </div> <!-- end of container -->
+    </nav> <!-- end of navbar -->
+    <!-- end of navigation -->
+
+    <!-- Header -->   
+    <header id="header" class="header"> 
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 py-6 pb-0 pt-lg-0">
+                    <h3 class="text-primary mb-3" id="name">I'm</h3>
+                    <h1 class="display-3 ">Wilson de Souza Júnior</h1>
+                    <div class="card-typing">
+                        <div class="loader-typing">
+                            <div class="words">
+                                <span class="word" id="engineer">Engenheiro da Computação</span>
+                                <span class="word" id="iot">Engenheiro de IoT</span>
+                                <span class="word" id="web-dev">Desenvolvedor Web</span>
+                                <span class="word" id="python-dev">Desenvolvedor Python</span>
+                                <span class="word" id="engineer2">Engenheiro da Computação</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center pt-5">
+                        <div id="buttons">
+                        <div id="download">
+                        <a id="curriculum" href="assets/curriculum/wilsonsouzajunior_portugues.pdf" target="_blank" class="btn py-3 px-4 me-5"><span class="download-button"><svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path
+                                d="M1 14.5a6.496 6.496 0 0 1 3.064-5.519 8.001 8.001 0 0 1 15.872 0 6.5 6.5 0 0 1-2.936 12L7 21c-3.356-.274-6-3.078-6-6.5zm15.848 4.487a4.5 4.5 0 0 0 2.03-8.309l-.807-.503-.12-.942a6.001 6.001 0 0 0-11.903 0l-.12.942-.805.503a4.5 4.5 0 0 0 2.029 8.309l.173.013h9.35l.173-.013zM13 12h3l-4 5-4-5h3V8h2v4z"
+                                fill="currentColor"></path>
+                        </svg>Download CV</span>
+                    </a>
+                </div>
+                        <div class="btn-group">
+                <button type="button" class=" dropdown-toggle  py-3 px-4 me-5" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Language
+                </button>
+                <ul class="dropdown-menu">
+                    <li><button type='button' class="dropdown-item" id="english">English</button></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><button type='button' class="dropdown-item" id='portuguese'>Portuguese</button></li>
+                </ul>
+            </div>
+        </div>
+                    </div>
+                    <div class="mobile-box">
+                        <div class="mobile">
+                            <div class="btn1"></div>
+                            <div class="btn2"></div>
+                            <div class="btn3"></div>
+                            <div class="btn4"></div>
+                            <div class="card-int">
+                                <div class="dev" id="dev">Developer
+                                    <span class="hidden">Mobile &</span>
+                                    <span class="hidden">Front-End</span>
+                                </div>
+                            </div>
+                            <div class="top">
+                                <div class="camera">
+                                    <div class="int"></div>
+                                </div>
+                                <div class="speaker"></div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div> <!-- end of row -->           
+            <!-- end home-social -->
+        </div> <!-- end of container -->
+    </header> <!-- end of header -->
+    <!-- end of header -->
+
+    <!-- Home Social-->        
+    <ul class="example-2">
+        <li class="icon-content idioma">
+            <a type="button" id="botãoIdioma" aria-label="Translate" data-social="translate">
+                <div class="filled"></div>
+                <svg id="meu-svg" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="currentColor" class="bi bi-translate" viewBox="0 0 16 16">
+                    <defs>
+                        <!-- Definição do primeiro gradiente -->
+                        <linearGradient id="gradiente-1">
+                            <stop offset="0%" stop-color="#b22234" />
+                            <stop offset="50%" stop-color="#ffffff" />
+                            <stop offset="100%" stop-color="#3c3b6e" />
+                        </linearGradient>
+
+                        <!-- Definição do segundo gradiente -->
+                        <linearGradient id="gradiente-2">
+                            <stop offset="0%" stop-color="#ffcc29" />
+                            <stop offset="50%" stop-color="#009e49" />
+                            <stop offset="100%" stop-color="#002776" />
+                        </linearGradient>
+                    </defs>
+                    <path fill="currentColor"
+                        d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286zm1.634-.736L5.5 3.956h-.049l-.679 2.022z" />
+                    <path id="meu-path" fill="url(#gradiente-1)"
+                        d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm7.138 9.995q.289.451.63.846c-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6 6 0 0 1-.415-.492 2 2 0 0 1-.94.31" />
+                </svg>
+            </a>
+            <div class="tooltip">Translate</div>
+        </li>
+        
+        <li class="icon-content">
+            <a href="https://www.linkedin.com/in/wilson-souza-junior/" target="_blank" aria-label="LinkedIn" data-social="linkedin" rel="noopener">
+                <div class="filled"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-linkedin" viewBox="0 0 16 16" xml:space="preserve">
+                    <path
+                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                        fill="currentColor"></path>
+                </svg>
+            </a>
+            <div class="tooltip">LinkedIn</div>
+        </li>
+        <li class="icon-content">
+            <a href="https://github.com/wilsondesouza" target="_blank" aria-label="GitHub" data-social="github" rel="noopener">
+                <div class="filled"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github"
+                    viewBox="0 0 16 16" xml:space="preserve">
+                    <path
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+                        fill="currentColor"></path>
+                </svg>
+            </a>
+            <div class="tooltip">GitHub</div>
+        </li>
+        <li class="icon-content">
+            <a href="https://www.instagram.com/juni0r.s0uza/" target="_blank" aria-label="Instagram" data-social="instagram" rel="noopener">
+                <div class="filled"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-instagram" viewBox="0 0 16 16" xml:space="preserve">
+                    <path
+                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                        fill="currentColor"></path>
+                </svg>
+            </a>
+            <div class="tooltip">Instagram</div>
+        </li>
+        <li class="icon-content">
+            <a href="https://www.youtube.com/@wilsonsouza7720" target="_blank" aria-label="Youtube" data-social="youtube" rel="noopener">
+                <div class="filled"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube"
+                    viewBox="0 0 16 16" xml:space="preserve">
+                    <path
+                        d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"
+                        fill="currentColor"></path>
+                </svg>
+            </a>
+            <div class="tooltip">Youtube</div>
+        </li>
+    </ul>
+    <!-- About-->
+    <div id="carouselExampleControls" class="carousel slide" data-bs-interval="false">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div id="about" class="section basic-1 ">
+                <div class="container">
+                    <div class="row">
+                        <div class="row-lg-4">
+                            <div class="text-container first">
+                                <h3 id="hello">Olá, meu nome é Wilson.</h3>
+                                <p id="about-paragraph">De forma sucinta, posso dizer que me considero uma pessoa organizada e
+                                    sistemática, ética e profissional, investigativa, convencional e realístico (Referências ao
+                                    teste de Holland).
+                                    <br> <br>
+                                    Por conta disso decidi realizar uma transição de carreira para uma que se adeque mais ao meu
+                                    perfil, e assim decidi entrar na área de T.I quando iniciei meus estudos em Engenharia de
+                                    Computação.
+                                    <br> <br>
+                                    Desde então, constantemente busco novos conhecimentos sobre as diversas
+                                    tecnologias da área, sempre me qualificando através de certificados. E para por em prática
+                                    as habilidades adquiridas busco um estágio, para também aprender novas habilidades e
+                                    ferramentas na intenção de desenvolver minha carreira.</p>
+                            </div> <!-- end of text-container -->
+                        </div> <!-- end of col -->
+                        <div class="col-lg-4">
+                            <div class="text-container second">
+                                <div class="time">2023 - Presente</div>
+                                <h6>Freelance Developer</h6>
+                                <p id="freelance">Trabalhando em meus próprios projetos pessoais e para pequenos comerciantes da região</p>              
+                            </div> <!-- end of text-container -->
+                        </div> <!-- end of col -->
+                        <div class="col-lg-4">                   
+                            </div> <!-- end of text-container -->
+                        </div> <!-- end of col -->
+                    </div> <!-- end of row -->
+                </div> <!-- end of container -->
+          </div>
+            <!-- end of about -->
+
+    <!-- Details -->
+    <div class="carousel-item">
+	<div class="split">
+		<div class="area-2">                
+            <div class="container">    
+                <div class="row">
+                    <div class="col-lg-12">                         
+                        <!-- Text Container -->
+                        <div class="text-container">
+
+                            <h5>SOFT SKILLS</h5>
+                                <div class="icons-container">
+                                    <img title="Scrum" src="assets/images/agil.avif" alt="Scrum"/>
+                                    <img title="Design Thinking" src="assets/images/design-thinking.avif" alt="Design Thinking"/>
+                                    <img title="Kanban" src="assets/images/kanban.avif" alt="Kanban"/>
+                                </div> <!-- end of icons-container -->
+  
+                            <h5>CLOUD</h5>
+                            <div class="icons-container">
+                                <img title="AWS" src="https://camo.githubusercontent.com/ecb07957af8fa1dafd763103a2732a8c156a607bb4cd9f13fe98176f91246756/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f392f39332f416d617a6f6e5f5765625f53657276696365735f4c6f676f2e737667" alt="AWS"/>
+                                <img title="Azure" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/azure/azure-original.svg" alt="Azure"/>
+                            </div> <!-- end of icons-container -->
+
+                            <h5>DEVELOPMENT SKILLS</h5>
+                            <div class="icons-container">
+                                <img title="Python" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python"/>
+                                <img title="Flutter" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/flutter/flutter-original.svg" alt="Flutter"/>
+                                <img title="JavaScript" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript"/>
+                                <img title="React" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="React"/>
+                            </div> <!-- end of icons-container -->
+
+                            <h5>TOOLS</h5>
+                            <div class="icons-container">
+                                <img title="Android Studio" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/androidstudio/androidstudio-original.svg" alt="Android Studio"/>
+                                <img title="VS Code" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg" alt="VS Code"/>
+                                <img title="Kali Linux" src="https://camo.githubusercontent.com/9fd512a4acfb5d076a0f358507efc6886911a0f555274491f0308ec55b0738fc/68747470733a2f2f706c61792d6c682e676f6f676c6575736572636f6e74656e742e636f6d2f583233626e72344d37455145464e3236755f4961716164506a4767564f44697631385a55507377772d55576a415f6d37596b4979517668774453335268667244683057553d773234302d683438302d7277" alt="Kali Linux"/>
+                                <img title="Canva" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/canva/canva-original.svg" alt="Canva"/>
+                                <img title="Figma" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg" alt="Figma"/>
+                            </div> <!-- end of icons-container -->
+
+                        </div> <!-- end of text-container -->
+                        <!-- end of text container -->
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+		</div><!-- end of area-1 on same line and no space between comments to eliminate margin white space --><div class="area-2">
+            <div class="container">    
+                <div class="row">
+                    <div class="col-lg-12">     
+                        
+                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                            <ul class="nav nav-pills rounded border border-2 border-primary mb-5">
+                                <li class="nav-item w-50">
+                                    <button class="nav-link w-100 py-3 fs-5 active" data-bs-toggle="pill" href="#tab-1" id="education">Educação</button>
+                                </li>
+                                <li class="nav-item w-50">
+                                    <button class="nav-link w-100 py-3 fs-5" data-bs-toggle="pill" href="#tab-2" id="certificates">Certificados</button>
+                                </li>
+                                <li class="nav-item w-50">
+                                    <button class="nav-link w-100 py-3 fs-5" data-bs-toggle="pill" href="#tab-3" id="certifications">Certificações</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="tab-1" class="tab-pane fade show p-0 active">
+                                    <div class="row gy-5 gx-4">
+                                        <div class="col-sm-12">
+                                            <h5 style="width: max-content;" id="engenharia">Engenharia da Computação</h5>
+                                            <hr class="text-primary my-2">
+                                            <p class="text-primary mb-1">2023 - 2025</p>
+                                            <h6 class="mb-0">Descomplica</h6>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <h5 id="logistica">Logística</h5>
+                                            <hr class="text-primary my-2">
+                                            <p class="text-primary mb-1">2016 - 2020</p>
+                                            <h6 class="mb-0">Estácio de Sá</h6>
+                                        </div>                                     
+                                    </div>
+                                </div>
+                                <div id="tab-2" class="tab-pane fade show p-0">
+                                    <div class="row gy-5 gx-4">
+
+                                        <div class="col-sm-6">
+                                            <h5>AWS re/Start2</h5>
+                                            <hr class="text-primary my-2">
+                                            <p class="text-primary mb-1">2024</p>
+                                            <h6 class="mb-0">Escola da Nuvem</h6>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <h5>Python Backend Developer</h5>
+                                            <hr class="text-primary my-2">
+                                            <p class="text-primary mb-1">2024</p>
+                                            <h6 class="mb-0">dio</h6>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <h5 id=dev-flutter>Desenvolvimento Mobile com Flutter</h5>
+                                            <hr class="text-primary my-2">
+                                            <p class="text-primary mb-1">2023</p>
+                                            <h6 class="mb-0">Santader</h6>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <h5>FrontEnd Development</h5>
+                                            <hr class="text-primary my-2">
+                                            <p class="text-primary mb-1">2023</p>
+                                            <h6 class="mb-0">Instituto Nu</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab-3" class="tab-pane fade show p-0">
+                                    <div class="row gy-5 gx-4">
+
+                                        <div class="col-sm-6">
+                                            <h5>Certified Cloud Practitioner</h5>
+                                            <hr class="text-primary my-2">
+                                            <p class="text-primary mb-1">2024</p>
+                                            <h6 class="mb-0">AWS</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+		</div> <!-- end of area-2 -->
+    </div> <!-- end of split -->
+</div>
+</div>
+<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </a>
+</div>
+    <!-- end of details -->
+
+    <!-- Projects -->
+    <div id="projects" class="basic-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="h2-heading" id="projects-title">Projetos</h3>    
+                    <p class="p-heading" id="projects-paragraph">A seguir deixarei alguns projetos que já desenvolvi. Desde projetos
+                        simples, práticos, funcionais até os mais complexos.
+                        <br>
+                        Alguns projetos foram construídos para
+                        servir de avaliação para alguns cursos, e outros foram feitos para assimilar e solidificar
+                        meus conhecimentos e habilidades, sendo estes projetos pessoais.</p>                    
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+
+            <div class="container-projects">
+                <section id="main-projects" class="splide" aria-label="Beautiful Images">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                    <div class="card-projects">
+                                        <img class="h4" src="assets/images/p1.avif" alt="Python" id="python-image"/>
+                                        <video autoplay loop muted>
+                                            <source src="assets/images/p1.webm" type="video/webm" />
+
+                                        </video>
+                            
+                                        <div class="content">
+                                            <div class="h3">Descubra seu dano</div>
+                                            <blockquote id="python-details">Aplicativo desktop programado em Python utilizando a biblioteca Custom
+                                                Tkinter para a criação da interface gráfica. Foram utilizados dicionários para buscar e retornar
+                                                valores e listas para a geração dos botões.</blockquote>
+                                                <div class="btn-group">
+                                                    <button type="button" class="card__button" data-bs-toggle="dropdown"
+                                                        aria-expanded="false">
+                                                        Ver Opções
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a rel="noopener" href="https://descubra-seu-dano.vercel.app/" target="_blank" class="card__button">JavaScript Web</a></li>
+                                                        <li>
+                                                            <hr class="dropdown-divider">
+                                                        </li>
+                                                        <li><a rel="noopener" href="https://www.mediafire.com/file/hy01mron4tcek0y/Calculadora_de_Dano.rar/file" target="_blank" class="card__button">Python Desktop</a></li>
+                                                    </ul>
+                                                </div>
+                                            <a rel="noopener" href="https://github.com/wilsondesouza/Descubra-seu-dano" target="_blank"
+                                                class="card__button secondary">Repositório</a>
+                                        </div>
+                                    </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="card-projects">
+                                    <img class="h4" src="assets/images/r6.avif" alt="JavaScript" id="react-image"/>
+                        
+                                    <div class="content">
+                                        <div class="h3">Universo do Saber</div>
+                                        <blockquote id="react-details">Site
+                                            construído para completar o curso Instituto Nu. Utilizado biblioteca React para deixar o site
+                                            reativo e interativo. JavaScript vanilla também foi utilizado para aplicar algumas lógicas no
+                                            Carrinho de Compras e na alteração de Temas.</blockquote>
+                                        <a rel="noopener" href="https://projeto-js-e-react.vercel.app/" target="_blank" class="card__button">Acessar</a>
+                                        <a rel="noopener" href="https://github.com/wilsondesouza/projeto_js_e_react" target="_blank"
+                                            class="card__button secondary">Repositório</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="card-projects">
+                                    <img class="h4" src="assets/images/f1.avif" alt="Flutter" id="flutter-image"/>
+                        
+                                    <div class="content">
+                                        <div class="h3">Guarda Dados</div>
+                                        <blockquote id="flutter-details">App
+                                            feito em Flutter para Android. Construído inicialmente para sanar necessidade de um comerciante
+                                            local, e posteriormente adaptado para uso pessoal. Utiliza de algumas dependências como
+                                            local-auth para biometria, shared-preferences para persistência de dados e provider para
+                                            reutiliza widgets.</blockquote>
+                                        <a rel="noopener" href="https://www.mediafire.com/file/kcoo5qnxr9hr5ch/Guarda+Dados.apk/file" target="_blank" class="card__button">Download APK</a>
+                                        <a rel="noopener" href="https://github.com/wilsondesouza/guarda_dados" target="_blank"
+                                            class="card__button secondary">Repositório</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+        
+            </div>
+
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    <!-- end of projects -->
+
+    <!-- Works -->
+    
+    <div class="basic-4">
+        <div class="container"> 
+            <p id="others-projects">Outros Projetos</p>
+            <div class="row works">
+                <div class="card">
+                    <img src="assets/images/unity.avif" alt="Unity">
+                    <div class="card__content">
+                        <p class="card__title">Pew Pew</p>
+                        <blockquote class="card__description" id="unity-details">Jogo desenvolvido em Unity com C#. É um jogo de tiro 3D simples com um personagem que pode saltar, mover, pegar itens e destruir inimigos. O jogo tem um menu simples e uma tela de "game over"
+                        </blockquote>
+                        <a rel="noopener" href="https://play.unity.com/mg/fps/pew-pew-1-4" target="_blank" class="card__button">Jogar</a>
+                        <a rel="noopener" href="https://github.com/wilsondesouza/pew-pew" target="_blank" class="card__button secondary">Repositório</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="assets/images/javascript.avif" alt="JavaScript">
+                    <div class="card__content">
+                        <p class="card__title">Yu-Gi-Oh! Jokenpo</p>
+                        <blockquote class="card__description" id="javascript-details">Webgame com construção simples de HTML, algumas estilizações CSS e programação em JavaScript para interagir com o usuário.
+                        </blockquote>
+                        <a rel="noopener" href="https://game-yu-gi-oh.vercel.app/" target="_blank" class="card__button">Jogar</a>
+                        <a rel="noopener" href="https://github.com/wilsondesouza/game-yu-gi-oh" target="_blank" class="card__button secondary">Repositório</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="img-fluid" src="assets/images/coming-soon.avif" alt="React / Node">
+                    <div class="card__content">
+                        <p class="card__title">Converse com os Heróis</p>
+                        <blockquote class="card__description" id="chat-details">Projeto fullstack contendo um banco de dados para alimentar uma API de I.A Generativa, para assim gerar um pequeno chat personalizado apto para interagir com o usuário final.
+                        </blockquote>
+                        <a rel="noopener" href="#" target="_blank" class="card__button">Acessar</a>
+                        <a rel="noopener" href="#" target="_blank" class="card__button secondary">Repositório</a>
+                    </div>
+                </div>
+            </div> <!-- end of row -->        
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-4 -->
+
+    <div class="container basic-5">
+        <p id="others-projects">Outros Projetos</p>
+        <section id="othersProjects" class="splide" aria-label="Beautiful Images">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <div class="card-projects">
+                            <img class="h4" src="assets/images/unity.avif" alt="Unity" />
+    
+                            <div class="content">
+                                <div class="h3">Pew Pew</div>
+                                <p id="unity-details">Jogo desenvolvido em Unity com C#. É um jogo de tiro 3D simples com um
+                                    personagem que pode saltar, mover, pegar itens e destruir inimigos. O jogo tem um menu
+                                    simples e uma tela de "game over"</p>
+                                <a rel="noopener" href="https://play.unity.com/mg/fps/pew-pew-1-4" target="_blank"
+                                    class="card__button">Jogar</a>
+                                <a rel="noopener" href="https://github.com/wilsondesouza/pew-pew" target="_blank"
+                                    class="card__button secondary">Repositório</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="card-projects">
+                            <img class="h4" src="assets/images/javascript.avif" alt="JavaScript" />
+    
+                            <div class="content">
+                                <div class="h3">Yu-Gi-Oh! Jokenpo</div>
+                                <p id="javascript-details">Webgame com construção simples de HTML, algumas estilizações CSS
+                                    e programação em JavaScript para interagir com o usuário.</p>
+                                <a rel="noopener" href="https://game-yu-gi-oh.vercel.app/" target="_blank"
+                                    class="card__button">Jogar</a>
+                                <a rel="noopener" href="https://github.com/wilsondesouza/game-yu-gi-oh" target="_blank"
+                                    class="card__button secondary">Repositório</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="card-projects">
+                            <img class="h4" src="assets/images/coming-soon.avif" alt="FullStack" />
+    
+                            <div class="content">
+                                <div class="h3">Converse com os Heróis</div>
+                                <p d="chat-details">Projeto fullstack contendo um banco de dados para alimentar uma API de
+                                    I.A Generativa, para assim gerar um pequeno chat personalizado apto para interagir com o
+                                    usuário final.</p>
+                                <a rel="noopener" href="#" target="_blank" class="card__button">Acessar</a>
+                                <a rel="noopener" href="#" target="_blank" class="card__button secondary">Repositório</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <!-- end of works -->
+
+    <div id="maisProjetos">
+        <a href="https://github.com/wilsondesouza?tab=repositories" class="btn py-3 px-4 me-5" id="repositories" target="_blank" rel="noopener"><span class="button__icon-wrapper" >
+            <svg width="10" class="button__icon-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 15">
+                <path fill="currentColor" d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"></path>
+            </svg>
+            
+            <svg class="button__icon-svg  button__icon-svg--copy" xmlns="http://www.w3.org/2000/svg" width="10" fill="none" viewBox="0 0 14 15">
+                <path fill="currentColor" d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"></path>
+            </svg>
+        </span><p id="mais-projetos">Mais Projetos</p></a>
+    </div>
+
+    <!-- Section Divider -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <hr class="section-divider">
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+    <!-- end of section divider --> 
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <p id="contact-paragraph">Estou disponível para contato, seja para oportunidades profissionais ou para uma equipe de estudos e aperfeiçoamento.</p>
+            
+                        <div class="main">
+                            <div class="up">
+                                <a title="Instagram" href="https://www.instagram.com/juni0r.s0uza/" target="_blank" rel="noopener">
+                                    <button type="button" class="card1" title="Instagram">
+                                    <svg id="instagram" fill-rule="nonzero" height="30px" width="30px" viewBox="0,0,256,256"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                                        <g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none"
+                                            font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10"
+                                            stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero">
+                                            <g transform="scale(8,8)">
+                                                <path
+                                                    d="M11.46875,5c-3.55078,0 -6.46875,2.91406 -6.46875,6.46875v9.0625c0,3.55078 2.91406,6.46875 6.46875,6.46875h9.0625c3.55078,0 6.46875,-2.91406 6.46875,-6.46875v-9.0625c0,-3.55078 -2.91406,-6.46875 -6.46875,-6.46875zM11.46875,7h9.0625c2.47266,0 4.46875,1.99609 4.46875,4.46875v9.0625c0,2.47266 -1.99609,4.46875 -4.46875,4.46875h-9.0625c-2.47266,0 -4.46875,-1.99609 -4.46875,-4.46875v-9.0625c0,-2.47266 1.99609,-4.46875 4.46875,-4.46875zM21.90625,9.1875c-0.50391,0 -0.90625,0.40234 -0.90625,0.90625c0,0.50391 0.40234,0.90625 0.90625,0.90625c0.50391,0 0.90625,-0.40234 0.90625,-0.90625c0,-0.50391 -0.40234,-0.90625 -0.90625,-0.90625zM16,10c-3.30078,0 -6,2.69922 -6,6c0,3.30078 2.69922,6 6,6c3.30078,0 6,-2.69922 6,-6c0,-3.30078 -2.69922,-6 -6,-6zM16,12c2.22266,0 4,1.77734 4,4c0,2.22266 -1.77734,4 -4,4c-2.22266,0 -4,-1.77734 -4,-4c0,-2.22266 1.77734,-4 4,-4z">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </a>
+                                <a title="LinkedIn" href="https://www.linkedin.com/in/wilson-souza-junior/" target="_blank" rel="noopener">
+                                    <button type="button"  class="card2" title="LinkedIn">
+                                        <svg viewBox="0 0 448 512" height="1.6em" id="linkedin" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="down">
+                                <a title="GitHub" href="https://github.com/wilsondesouza" target="_blank" rel="noopener">
+                                    <button type="button" class="card3" title="GitHub">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30px" height="30px" id="github">
+                                        <path
+                                            d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </a>
+                            <a title="Youtube" href="https://www.youtube.com/@wilsonsouza7720" target="_blank" rel="noopener">
+                                <button type="button" class="card4" title="YouTube">
+                                    <svg height="50px" width="50px" viewBox="-6 -9 25 30" xmlns="http://www.w3.org/2000/svg" id="youtube">
+                                        <path
+                                            d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </a>
+                            </div>
+                        </div>      
+        </div> <!-- end of container -->
+    </div> <!-- end of footer -->  
+    <!-- end of footer -->
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="p-small" id="developer">2023-2024 • Desenvolvido por @wilsondesouza</a></p>
+                </div> <!-- end of col -->
+            </div> <!-- enf of row -->
+        </div> <!-- end of container -->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="p-small" id="host">Hospedado em GitHub Pages</p>
+                </div> <!-- end of col -->
+            </div> <!-- enf of row -->
+        </div> <!-- end of container -->
+        
+    </div> <!-- end of copyright --> 
+    <!-- end of copyright -->
+    
+    <!-- Loader -->
+    <div class="loader-overlay">
+        <div class="loader"></div>
+    </div>
+
+    
+    <!-- Chat Form  -->
+    <button id="show-form" title="Mostrar Formulário de Contato"> <div id="svg-form">
+    <svg id="show-form_svg" class="feather feather-message-square" fill="none" height="60" stroke="#0d6efd" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+        viewBox="0 0 24 24" width="60" xmlns="http://www.w3.org/2000/svg"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+    </button>
+
+    <div class="form-container">
+        <form class="form" id="form">
+            <div class="form-group">
+                <label for="from_name">Nome</label>
+                <input required type="text" name="from_name" id="from_name">
+                <label for="from_email">Email</label>
+                <input required type="email" name="from_email" id="from_email">
+            </div>
+            <div class="form-group">
+                <label for="message">Como posso te ajudar?</label>
+                <textarea required cols="50" rows="10" id="message" name="message">          </textarea>
+            </div>
+            <input type="submit" id="button-mail" value="Enviar" class="form-submit-btn">
+        </form>
+
+        <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+        <script type="text/javascript">
+            emailjs.init('Jwl5C58dg568Qdylf')
+        </script>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/scrollReveal.js"></script> <!-- Scroll Reveal library -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+
+    <!-- Embedded -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> <!-- Bootstrap -->
+    <script src="js/splide.min.js"></script> <!-- Splide -->
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script> <!-- ScrollReveal -->
+
+    <!-- Personal -->
+    <script>window.addEventListener('DOMContentLoaded', () => {
+        if (window.innerWidth >= 1024) {
+            const script = document.createElement('script');
+            script.src = "js/scrollReveal.js"; 
+            document.body.appendChild(script);
+        }
+    });</script>
+
+    <script src="js/theme.js"></script> 
+    <script src="js/scripts.js"></script> 
+    <script src="main.js"></script>
+</body>
+</html>

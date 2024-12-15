@@ -1,0 +1,15 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Seja bem-vindo ao meu portfólio. Este website foi meticulosamente elaborado para consolidar as informações primordiais acerca da minha trajetória profissional.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "portfolio": "file:"
+  }
+}

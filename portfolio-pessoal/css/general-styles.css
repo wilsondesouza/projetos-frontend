@@ -1,0 +1,113 @@
+/* Description: General Styles CSS file */
+
+/*****************************************
+Table Of Contents:
+- General Styles
+
+/**************************/
+/*     General Styles     */
+/**************************/
+:root {
+	--primary-color: white;
+	--heading-font-weight: 700;
+	--heading-font-size: 2.5rem;
+	--heading-line-height: 3.25rem;
+	--font-family: "Poppins";
+}
+
+* {
+	transition: 1s;
+}
+
+body,
+html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+body,
+p {
+	font: 400 1rem/1.625rem "Open Sans", sans-serif;
+}
+
+h1 {
+	color: var(--primary-color);
+	font-weight: var(--heading-font-weight);
+	font-size: var(--heading-font-size);
+	line-height: var(--heading-line-height);
+	font-family: var(--font-family);
+}
+
+h3 {
+	font-weight: var(--heading-font-weight);
+	font-size: 1.75rem;
+	line-height: 2.25rem;
+	font-family: var(--font-family);
+}
+
+h5 {
+	font-weight: var(--heading-font-weight);
+	font-size: 1.25rem;
+	line-height: 1.625rem;
+	font-family: var(--font-family);
+}
+
+h6 {
+	font-weight: var(--heading-font-weight);
+	font-size: 1rem;
+	line-height: 1.375rem;
+	font-family: var(--font-family);
+}
+
+video {
+	display: none;
+}
+
+.p-small {
+	font-size: 0.875rem;
+	line-height: 1.5rem;
+}
+
+a {
+	text-decoration: underline;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.section-divider {
+	display: block;
+	height: 1px;
+	margin: 0;
+	border: none;
+	background-color: #d3dae2;
+}
+
+.btn {
+	display: inline-block;
+	font-weight: 600;
+	font-size: 0.875rem;
+	line-height: 0;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+.btn:hover {
+	text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 0px 10px 10px 0px;
+	border: 1px solid #0d6efd;
+}

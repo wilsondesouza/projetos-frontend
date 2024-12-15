@@ -8,8 +8,8 @@ Favor navegar entre as pastas para acessar os conteúdos.
 
 1. [Pokedex](https://github.com/wilsondesouza/projetos-frontend/tree/main/pokedex)
 2. [Mundo Invertido](https://github.com/wilsondesouza/projetos-frontend/tree/main/mundo-invertido)
-3. [Multiverso Spider-Man](https://github.com/wilsondesouza/projetos-frontend/tree/main/spider-man-multiverse)
-4. [Portfólio](https://github.com/wilsondesouza/projetos-frontend/tree/main/portfolio)
+3. [Multiverso Spider-Man](https://github.com/wilsondesouza/projetos-frontend/tree/main/multiverso-homem-aranha)
+4. [Portfólio](https://github.com/wilsondesouza/projetos-frontend/tree/main/portfolio-pessoal)
 
 
 ## 🔎 Saiba Mais

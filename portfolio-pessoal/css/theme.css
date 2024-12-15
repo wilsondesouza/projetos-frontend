@@ -1,0 +1,196 @@
+/* Description: Theme CSS file */
+
+/*****************************************
+Table Of Contents:
+- Themes (Light and Dark)
+******************************************/
+
+/* Theme Toggle Button */
+#theme-toggle-button {
+	font-size: 17px;
+	position: relative;
+	display: inline-block;
+	width: 3rem;
+	cursor: pointer;
+	display: flex;
+}
+
+#toggle {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+#container,
+#patches,
+#stars,
+#button,
+#sun,
+#moon,
+#cloud {
+	transition-property: all;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 0.25s;
+}
+
+/* night sky background */
+#toggle:checked+svg #container {
+	fill: #2b4360;
+}
+
+#toggle:checked+svg #button {
+	transform: translate(28px, 2.333px);
+}
+
+#toggle:checked+svg #sun,
+#moon {
+	opacity: 0;
+}
+
+#toggle:checked+svg #moon,
+#sun {
+	opacity: 1;
+}
+
+#toggle:checked+svg #cloud,
+#stars {
+	opacity: 0;
+}
+
+#toggle:checked+svg #stars,
+#cloud {
+	opacity: 1;
+}
+
+/* Temas Claro e Escuro */
+
+:root {
+    --background-light: #e0e0e0;
+    --text-light: #24262a;
+    --background-dark: #24262a;
+    --text-dark: #e0e0e0;
+    --backgroundButton-light-hover: green;
+    --backgroundButton-dark-hover: #0d6efd;
+    --colorButton-light-hover: #24262a;
+    --colorButton-dark-hover: white;
+	--split-background-white: #ccc9c9;
+	--split-background-dark: #2e3033;
+	--theme-toggle-white: white;
+	--theme-toggle-dark: gold;
+	--navBarColor-dark: rgba(36, 38, 42, 0.9);
+	--navBarColor-light: rgba(255, 255, 255, 0.9);
+}
+
+/**************************/
+/*     General Styles     */
+/**************************/
+
+body {
+	background-color: var(--background-light);
+}
+
+p, a, a:hover, h2, h3, h4, h5, h6 {
+	color: var(--background-dark);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--background-dark);
+}
+
+/**********************/
+/*     Navigation     */
+/**********************/
+.navbar, nav.navbar.navbar-expand-lg.fixed-top.navbar-dark  {
+	background-color: var(--navBarColor-dark);
+	box-shadow: 0 1px 6px 0 #0d6efd, 1px 1px 10px #0d6efd inset;
+}
+
+div#navbarsExampleDefault {
+	background-color: transparent;
+}
+
+.navbar .logo-text {
+	color: var(--text-dark);
+}
+
+.navbar .nav-item .nav-link {
+	color: var(--text-dark);
+}
+.navbar .nav-item.dropdown.show .nav-link,
+.navbar .nav-item .nav-link:hover,
+.navbar .nav-item .nav-link.active {
+	color: var(--backgroundButton-dark-hover);
+}
+
+/*****************/
+/*     Typing     */
+/*****************/
+.card-typing {
+	background-color: var(--background-light);
+	border: 1px solid rgb(61, 106, 255);
+}
+
+/*****************/
+/*     About     */
+/*****************/
+.basic-1 .time {
+	color: var(--backgroundButton-dark-hover);
+}
+#about {
+	background-color: var(--split-background-white);
+}
+#about, #about p {
+    color: var(--text-light);
+}
+
+/*******************/
+/*     Details     */
+/*******************/
+.split {
+	background-color: var(--split-background-white);
+}
+.split h5, .split h6 {
+	color: var(--text-light)
+}
+
+/********************/
+/*     Projects     */
+/********************/
+
+#projects h2, #projects h3{
+	color: var(--text-light);
+}
+
+/*****************/
+/*     Works     */
+/*****************/
+.basic-4, .basic-3 , .basic-5, #maisProjetos {
+	background-color: var(--background-light);
+}
+
+#mais-projetos:hover .button__icon-wrapper {
+	color: #0d6efd;
+}
+
+/******************/
+/*     Footer     */
+/******************/
+.footer {
+	background-color: var(--background-dark);
+}
+.footer p {
+	color: var(--colorButton-dark-hover);
+}
+
+/*********************/
+/*     Copyright     */
+/*********************/
+.copyright {
+	background-color: var(--background-dark);
+}
+.copyright .p-small {
+	color: var(--text-dark);
+}
+.copyright a {
+	color: var(--text-dark);
+}
