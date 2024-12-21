@@ -17,7 +17,7 @@ Navegar entre as pastas para acessar cada projeto com sua própria documentaçã
 
 
 ## 🛠️ Como Utilizar
-Você pode acessar o portal por [aqui](https://wilsondesouza.github.io/projetos-frontend/) e nele basta escolher qual projeto deseja visualizar
+Você pode acessar o portal por [aqui](https://wilsondesouza.github.io/projetos-frontend/) OU [aqui](https://projetos-frontend.vercel.app/) e nele basta escolher qual projeto deseja visualizar
 
 > Confira um exemplo visual abaixo:
 
