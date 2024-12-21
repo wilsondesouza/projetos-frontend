@@ -1,0 +1,18 @@
+/* Description: General Styles CSS file */
+
+/*****************************************
+Table Of Contents:
+- General Styles
+
+/**************************/
+/*     General Styles     */
+/**************************/
+
+:root {
+    background-color: #000;
+    color: #fff
+}
+
+footer {
+    padding: 16.4rem 0 0 0;
+}

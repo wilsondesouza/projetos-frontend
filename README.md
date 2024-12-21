@@ -14,3 +14,11 @@ Favor navegar entre as pastas para acessar os conteúdos.
 
 ## 🔎 Saiba Mais
 Navegar entre as pastas para acessar cada projeto com sua própria documentação.
+
+
+## 🛠️ Como Utilizar
+Você pode acessar o portal por [aqui](https://wilsondesouza.github.io/projetos-frontend/) e nele basta escolher qual projeto deseja visualizar
+
+> Confira um exemplo visual abaixo:
+
+![Apresentação](assets/images/apresentacao.png)
