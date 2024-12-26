@@ -12,8 +12,14 @@
     transition: 1.5s;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 body {
     background: var(--page-background);
+
 }
 
 h1,

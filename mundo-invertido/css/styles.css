@@ -200,10 +200,7 @@ footer {
     overflow: hidden;
 }
 
-footer p {
-    max-width: 700px;
-    margin-bottom: 24px;
-}
+
 
 footer::before,
 footer::after {
@@ -224,4 +221,8 @@ footer::before {
 footer::after {
     right: -50px;
     transform: rotateZ(10deg);
+}
+
+footer p {
+    padding: 0 0 1rem 0;
 }

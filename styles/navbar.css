@@ -8,88 +8,111 @@ Table Of Contents:
 /*     Barra de Navegação     */
 /**************************/
 
+/* Define estilos para a barra de navegação */
 .navbar {
-    display: flex;
-    justify-content: space-around;
+    display: flex; 
+    justify-content: space-around; 
     padding: 0 0 16.4rem 0;
 }
 
-ul {
-    list-style: none;
+.navbar a {
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
+.navbar a:hover {
+    transform: scale(1.1);
+    color: #ffcc00; /* Um destaque agradável */
+}
+
+/* Remove os marcadores de lista */
+ul {
+    list-style: none; 
+}
+
+/* Define estilos para o exemplo de ícones */
 .example-2 {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; 
+    align-items: center; 
 }
 
+/* Define estilos para o conteúdo do ícone */
 .example-2 .icon-content {
-    margin: 0 10px;
-    position: relative;
+    margin: 0 10px; 
+    position: relative; 
 }
 
+/* Define estilos para os links dentro do conteúdo do ícone */
 .example-2 .icon-content a {
-    position: relative;
+    position: relative; 
     overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    color: #fff;
-    transition: all 0.3s ease-in-out;
+    align-items: center; 
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    color: #fff; 
+    transition: all 0.3s ease-in-out; 
 }
 
+/* Define estilos para os links ao passar o mouse */
 .example-2 .icon-content a:hover {
-    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%); 
 }
 
+/* Define estilos para os ícones SVG dentro dos links */
 .example-2 .icon-content a svg {
-    position: relative;
-    z-index: 1;
-    width: 30px;
+    position: relative; 
+    z-index: 1; 
+    width: 30px; 
     height: 30px;
 }
 
+/* Define estilos para os links ao passar o mouse */
 .example-2 .icon-content a:hover {
-    color: white;
+    color: white; 
 }
 
+/* Define estilos para o elemento preenchido dentro dos links */
 .example-2 .icon-content a .filled {
-    position: absolute;
-    top: auto;
+    position: absolute; 
+    top: auto; 
     bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 0;
+    left: 0; 
+    width: 100%; 
+    height: 0; 
     background-color: #000;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; 
 }
 
+/* Define estilos para o elemento preenchido ao passar o mouse */
 .example-2 .icon-content a:hover .filled {
-    height: 100%;
+    height: 100%; 
 }
 
+/* Define estilos específicos para o ícone do LinkedIn */
 .example-2 .icon-content a[data-social="linkedin"] .filled {
-    background-color: #0274b3;
+    background-color: #0274b3; 
 }
 
+/* Define estilos específicos para o ícone do GitHub */
 .example-2 .icon-content a[data-social="github"] .filled {
-    background-color: #862e9c;
+    background-color: #862e9c; 
 }
 
+/* Define estilos específicos para o ícone do Instagram */
 .example-2 .icon-content a[data-social="instagram"] .filled {
-    background: linear-gradient(45deg,
-            #405de6,
-            #5b51db,
-            #b33ab4,
-            #c135b4,
-            #e1306c,
-            #fd1f1f);
+    background: linear-gradient(45deg, 
+        #405de6,
+        #5b51db,
+        #b33ab4,
+        #c135b4,
+        #e1306c,
+        #fd1f1f);
 }
 
+/* Define estilos específicos para o ícone do YouTube */
 .example-2 .icon-content a[data-social="youtube"] .filled {
-    background-color: #ff0000;
+    background-color: #ff0000; 
 }

@@ -9,10 +9,38 @@ Table Of Contents:
 /**************************/
 
 :root {
-    background-color: #000;
     color: #fff
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: linear-gradient(to bottom, #1e1e1e, #000);
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#content {
+    display: none; /* O conteúdo começa oculto */
+  }
+
 footer {
-    padding: 16.4rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 6.95rem 0 0 0;
+}
+
+footer img {
+    height: 20px;
+    opacity: 1;
+}
+
+footer img:hover {
+    opacity: 1;
 }

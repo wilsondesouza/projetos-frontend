@@ -7,6 +7,11 @@
     box-sizing: border-box;
     
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 header {
     width: 97%;
     max-width: 980px;

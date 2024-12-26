@@ -8,54 +8,65 @@ Table Of Contents:
 /*     Cards    */
 /**************************/
 
+/* Define estilos para os contêineres */
 .container, .container-cards {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
 }
 
+/* Estilos específicos para o contêiner de cartões */
 .container-cards {
-    
     justify-self: center;
 }
 
+/* Estilos para o elemento de vidro dentro do contêiner de cartões */
 .container-cards .glass {
-    position: relative;
-    width: 180px;
-    height: 200px;
-    background: linear-gradient(#fff2, transparent);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.5s;
-    border-radius: 10px;
-    margin: 0 -45px;
-    backdrop-filter: blur(10px);
-    transform: rotate(calc(var(--r) * 1deg));
+    position: relative; 
+    width: 180px; 
+    height: 200px; 
+    background: linear-gradient(#fff2, transparent); 
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    transition: 0.5s; 
+    border-radius: 10px; 
+    margin: 0 -45px; 
+    backdrop-filter: blur(10px); 
+    transform: rotate(calc(var(--r) * 1deg)); 
+    
 }
 
+/* Estilos para o elemento de vidro quando o contêiner de cartões é hover */
 .container-cards:hover .glass {
-    transform: rotate(0deg);
+    transform: rotate(0deg); 
     margin: 0 10px;
 }
 
-.container-cards .glass::before {
-    content: attr(data-text);
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.05);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
+.container-cards .glass:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
+/* Estilos para o pseudo-elemento antes do elemento de vidro */
+.container-cards .glass::before {
+    content: attr(data-text); 
+    position: absolute; 
+    bottom: 0; 
+    width: 100%; 
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05); 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    color: #fff; 
+}
+
+/* Estilos para o SVG dentro do elemento de vidro */
 .container-cards .glass svg {
-    font-size: 2.5em;
-    fill: #fff;
+    font-size: 2.5em; 
+    fill: #fff; 
 }
